@@ -248,5 +248,10 @@ SPI API : android.net.sip
 
 SIP is a VoIP Protocol
  
+ 
+MIS is extension of SIP
+OpenMIS - Open Internet Protocol Multimedia Subsystem
+
+ 
 
 
