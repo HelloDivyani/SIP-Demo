@@ -1,4 +1,3 @@
-# SIP-Demo   ----- Basic LOgic How SIP Session Initiation Protocol Works -------
 SIP - Session Initiation Protocol  --- End to end oriented signaling protocol
 -Easy Outgoing and incoming calls without having to manage sessions, transport-level communication, or audio record or playback directly.
 
@@ -248,10 +247,99 @@ SPI API : android.net.sip
 
 SIP is a VoIP Protocol
  
- 
-MIS is extension of SIP
-OpenMIS - Open Internet Protocol Multimedia Subsystem
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+IETF -  Internet Engineering Task Force
+SIP is signalling Protocol
+
+SIP DEMO :
+
+sip2sip sip server providers
+hellodivyani@sip2sip.info
+
+sip2sip 
+SIP2SIP is a real time communications service for Audio, Video, Presence, Chat,
+ File Transfer and multiparty conferencing based on SIP signaling and related media protocols (RTP, MSRP and XCAP). 
+The service is open and federates with external SIP and XMPP domains.
+
+
+
+Wireshark Network Analyser
+SSL (Secure Sockets Layer) is the standard security technology for establishing an encrypted link between a web server and a browser. 
+This link ensures that all data passed between the web server and browsers remain private and integral.
+
+VoIP is short for Voice over Internet Protocol.
+ Voice over Internet Protocol is a category of hardware and software that enables people to use the Internet as the transmission medium for 
+ telephone calls by sending voice data in packets using IP rather than by traditional circuit transmissions of the PSTN.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+WebRTC  -  WebRealTime Communication
+It is a collection of Communication Protocol and Application Programming Interfaces that enable real time communication 
+This allows web browsers to not only request resources from backend servers, but also real-time information from **browsers** of other users.
+This enables applications such as video conferencing, file transfer, chat, or desktop sharing without the need of either internal or external plugins
+
+WebRTC uses Real-Time Protocol to transfer audio and video.
+
+
+PEER - TO -  PEER Communication:
+Benefit is real time audio video communications
+Inorder to communication with another person through web browser
+each person’s web browser must agree to begin communication,
+ know how to locate one another, bypass security and firewall protections, and transmit all multimedia communications in real-time.
+ One of the biggest challenges associated with browser-based peer-to-peer communications is 
+ knowing how to locate and establish a network socket connection
+ with another computer’s web browser in order to bidirectionally transmit multimedia data
 
  
+ 
+ 
+ Firewalls and NAT (Network Access Translation Device)Traversals : 
+ Most of us access the internet from a work or home-based network. 
+ Our computer typically sits behind a firewall and network access translation device (NAT), 
+ and therefore is not assigned a static public IP address.
+ 
+ From a very high level, a NAT device translates private IP addresses from inside a firewall to public-facing IP addresses. 
+ NAT devices are needed for security and IPv4 limitations on available public IP addresses.
+ 
+ 
+ Given the involvement of a NAT device, how do I know my mom’s IP address to send audio and video data to,
+ and likewise, how does she know what IP address to send audio and video back to?
+
+NAT  :  Network Access Translation Device
+STUN :Session Traversal Utilites for NAT
+TURN : Traversal Using Relays Around NAT
+
+
+This is where STUN (Session Traversal Utilities for NAT) and TURN (Traversal Using Relays around NAT) servers come into play. 
+In order for WebRTC technologies to work, a request for your public-facing IP address is first made to a STUN server. 
+Think of it like your computer asking a remote server, “Howdy, would you mind telling me what IP address you see me as having?”.
+ The server then responds with something like, “Sure thing ‘ol chap, the way I see it, your IP address is 198.54.5.67”.
+ 
+ 
+ JSEP :  Javascript Session establishment Protocol
+ 
+ Signalling Involves :
+ * Network Discovery
+ * NAT Traversal
+ * Session Creation and Management
+ * communication security, media-capability metadata and coordination, and error handling.
+ 
+ 
+ 
+ 
+Steps :
+1.After getting your public ip address from STUN
+2.Actually negotiate and establish the network session connection with your peer. This process is analogous to making a phone call.
+3.The initial session negotiation and establishment happens using a signaling/communication protocol specialized in multimedia communications.
+ This protocol is also responsible for governing the rules by which the session is managed and terminated.
+ 
+ 
+ 
+ 
+ 
+
+
+
 
 
