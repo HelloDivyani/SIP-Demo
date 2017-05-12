@@ -334,10 +334,69 @@ Steps :
 3.The initial session negotiation and establishment happens using a signaling/communication protocol specialized in multimedia communications.
  This protocol is also responsible for governing the rules by which the session is managed and terminated.
  
+ ICE - Interactive Connectivity Establishment Protocol
+ One such protocol is SIP
+ Any peer (i.e., WebRTC-leveraging application) that is attempting to communicate with another peer generates a set of ICE candidates, 
+ where ICE stands for the Interactive Connectivity Establishment protocol. The candidates represent a given combination of IP address, port,
+ and transport protocol to be used. 
+ Note that a single computer may have multiple network interfaces (wireless, wired, etc.), so can be assigned multiple IP addresses, one for each interface.
+ 
+ ---
+ WebRTC  -  communication between browser
+ WebRTC Application :
+ 1.Media Capture : 
+ The first step is to get access to the camera and microphone of the user's device. We detect the
+type of devices available, get user permission to access these devices and manage the stream.
+2.Encoding and Decoding of Audio and Video:
+It is not an easy task to send a stream of audio and video data over the Internet. This is where
+encoding and decoding are used. This is the process of splitting up video frames and audio waves
+into smaller chunks and compressing them. This algorithm is called codec. There is an enormous
+amount of different codecs, which are maintained by different companies with different business
+goals. There are also many codecs inside WebRTC like H.264, iSAC, Opus and VP8. When two
+browsers connect together, they choose the most optimal supported codec between two users.
+Fortunately, WebRTC does most of the encoding behind the scenes.
+3.Transportation Layer:  Packet Loss and Connecting to Other Users
+The transportation layer manages the order of packets, deal with packet loss and connecting to
+other users. Again the WebRTC API gives us an easy access to events that tell us when there
+are issues with the connection.
+4.Session Mangement : 
+Deals with Managing Opening and Organizing the connections commonly knowns as signaling.
+If you transfer audio and video streams to the user it also makes
+sense to transfer collateral data. This is done by the RTCDataChannel API.
+
+ https://appr.tc/r/900476701
  
  
- 
- 
+There are three different layers : 
+1.API FOR web developers :API for web developers – this layer contains all the APIs web developer needed, including
+RTCPeerConnection, RTCDataChannel, and MediaStream objects.
+2. API for browser makers
+3. Overridable API, which browser makers can hook
+
+
+In SIP Triangle Model Gives More flexibility to  web developer as both end use the same web application
+
+
+WebRTC API : 
+
+The WebRTC API has 3 main javascript objects : 
+RTCPeerConnection MediaStream RTCDataChannel
+
+RTCPeerConnection OBJECT : main entry point in WebRTC API
+The main task of the RTCPeerConnection object is to setup and create a peer connection.
+
+
+// meta tag basically specifies what character set is your website written with UTF-8 (U from Universal Character Set + Transformation Format—8-bit)
+
+
+
+
+
+
+
+
+
+
 
 
 
